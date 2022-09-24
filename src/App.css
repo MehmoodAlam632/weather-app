@@ -13,7 +13,7 @@
   width: 500px;
   height: 300px;
   background-color: rgb(247, 250, 252);
-  
+
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -117,3 +117,21 @@
 .heading {
   color: #fff;
 }
+.error-img {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  margin-top: 50px;
+}
+.error-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+/* @media only screen and (max-width: 350px) {
+  .weather-card {
+    /* max-width: 300px; */
+/* width: 300px;
+   border: 1px solid grey;
+  }
+} */
