@@ -31,7 +31,7 @@ const WeatherApp = () => {
         .catch((err) => {
           setLoading(false);
           setError(true);
-        }); 
+        });
     }
   };
 
@@ -41,8 +41,9 @@ const WeatherApp = () => {
 
   const searchHandler = () => {
     getWeatherDetails(inputValue);
+    setInputValue("");
   };
-  
+
   console.log("error :>> ", error);
   return (
     <>
@@ -54,7 +55,7 @@ const WeatherApp = () => {
               type="text"
               placeholder="Enter city name"
               value={inputValue}
-              className="form-control"
+              className="form-control input-field"
               autoFocus
               onChange={(e) => setInputValue(e.target.value)}
             />
@@ -66,7 +67,7 @@ const WeatherApp = () => {
               Search
             </button>
           </div>
-          <div className="col-md-12 text-center mt-5">
+          <div className="col-md-12 text-center mt-5 ">
             <div className="shadow rounded weatherResultBox ">
               {loading ? (
                 <div class="lds-roller">
@@ -82,8 +83,8 @@ const WeatherApp = () => {
               ) : (
                 <>
                   {error ? (
-                    <div>
-                      <img src="/images/error.png" alt="" />
+                    <div className="error-img">
+                      <img src="/images/404.webp" alt="" />
                     </div>
                   ) : (
                     <>
